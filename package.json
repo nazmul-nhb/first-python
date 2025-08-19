@@ -1,0 +1,12 @@
+{
+  "name": "python-practice",
+  "description": "Practice Python programming with Mosh Hamedani",
+  "scripts": {
+    "commit": "nhb-commit"
+  },
+  "devDependencies": {
+    "nhb-scripts": "^1.8.57",
+    "nhb-toolbox": "^4.14.10"
+  },
+  "version": "1.0.0"
+}

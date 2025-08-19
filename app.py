@@ -2,11 +2,16 @@
 Python Practice
 """
 
-mango = 'fozli'
-if mango == 'fozli':
-    print(mango + " khao")
-else:
-    print('mara khao')
+FIRST = "Nazmul"
+LAST = "Hassan"
 
-for item in range(20, 41):
-    print(item)
+FULL = FIRST + " " + LAST
+
+FULL_FMT = f"{FIRST} {LAST}"
+
+print(FULL, "Length:", len(FULL_FMT))
+
+print(FULL_FMT.upper())
+print(FULL_FMT.title())
+print(FULL_FMT.lower())
+print(FULL_FMT.capitalize())
