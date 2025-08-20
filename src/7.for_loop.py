@@ -23,3 +23,13 @@ for num in range(3):
         break
 else:
     print("Failed after 3 attempts")
+
+
+# Nested Loop
+for i in range(4):
+    for j in range(3):
+        print(f"{i}:{j}")
+
+print(type(range(4)))
+
+# range() is returns an Iterable
