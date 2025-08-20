@@ -32,4 +32,4 @@ for i in range(4):
 
 print(type(range(4)))
 
-# range() is returns an Iterable
+# range() returns an Iterable
