@@ -1,5 +1,5 @@
 """
-Python Practice: String
+Python Practice: Strings
 """
 
 FIRST = "Nazmul"
