@@ -6,7 +6,7 @@ import os
 from bs4 import BeautifulSoup
 from requests_html import HTMLSession
 
-os.makedirs("./word_list", exist_ok=True)
+os.makedirs("./thesaurus_list", exist_ok=True)
 
 letters = (
     'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
@@ -19,6 +19,7 @@ for letter in letters:
 
     while True:
         url = f"https://www.merriam-webster.com/browse/dictionary/{letter}/{PAGE}"
+        # url = f"https://www.merriam-webster.com/browse/thesaurus/{letter}/{PAGE}"
         session = HTMLSession()
         response = session.get(url)
         print(f"Parsing: {response.html.url}")
@@ -35,7 +36,7 @@ for letter in letters:
         next_disabled = soup.select(".next.disabled")
 
         if next_disabled:
-            with open(f"./word_list/{letter}.txt", 'w', encoding="utf-8") as text_file:
+            with open(f"./thesaurus_list/{letter}.txt", 'w', encoding="utf-8") as text_file:
                 unique_words = list(dict.fromkeys(list_words))
                 for word in unique_words:
                     text_file.write(word + '\n')
